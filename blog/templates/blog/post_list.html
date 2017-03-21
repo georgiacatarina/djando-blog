@@ -5,7 +5,13 @@
 <body>
 	<header>
 		<h1>Django</h1>
-		<p>Site teste django</p>
+		{% for post in posts %}
+		    <div>
+		    	<h2>{{post.title}}</h2>
+		    	<span>{{post.published_date}}</span>
+		    	<p>{{post.text|linebreaksbr}}</p>
+		    </div>
+		{% endfor %}
 	</header>
 </body>
 </html>
